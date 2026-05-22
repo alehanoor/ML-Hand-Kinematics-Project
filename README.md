@@ -2,17 +2,7 @@
 
 **ML-Based Kinematic 3D Hand Model Fitting: Enforcing Bone Length Consistency via PCA and Gaussian Process Regression**
 
-**Author:** Aleha Noor | LMS ID: 5368917
-
 A machine learning pipeline that corrects anatomically inconsistent 3D hand poses produced by MediaPipe. Using a compact **PCA + Gaussian Process Regression** model, it maps raw noisy joint positions (captured via Intel RealSense D435) to kinematically consistent poses — achieving **sub-millimetre RMSE (0.000775 m)** and a **4× improvement in bone-length consistency** over the MediaPipe baseline.
-
----
-
-## About
-
-Hand pose estimation from RGB-D cameras is central to human-computer interaction, AR/VR, and robotics. This project tackles a specific problem: raw 3D hand poses from MediaPipe are anatomically inconsistent — bone lengths fluctuate between frames even though real hand bones are rigid. Instead of patching this with hard-coded rules, the system trains an ML model to learn the kinematic correction directly from real captured data.
-
-Real hand motion was recorded using an Intel RealSense D435 depth camera. Kinematic fitting generates anatomically consistent ground-truth poses, and a PCA + Gaussian Process model learns to replicate that correction on unseen frames — running entirely on CPU with no GPU needed. The system achieves sub-millimetre positional accuracy and reduces bone-length jitter by 4×, evaluated on 755 real-world frames.
 
 ---
 
